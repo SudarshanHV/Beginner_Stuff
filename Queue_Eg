@@ -1,0 +1,29 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int Queue[1000],frontind,backind;
+void push(int x)
+{
+    ++backind;
+    Queue[backind]=x;
+}
+
+void pop()
+{
+    Queue[frontind]=0;
+    ++frontind;
+}
+bool isEmpty()
+{
+    if(frontind<backind) return true;
+    else return false;
+}
+int Front()
+{
+    return Queue[frontind];
+}
+int main()
+{
+
+}
